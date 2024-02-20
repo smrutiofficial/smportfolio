@@ -36,94 +36,41 @@ const Navbar = () => {
     playClickSound();
   };
 
-  const logoElement = logoRef.current;
-  const logospElement = logospRef.current;
-  const logopdElement = logopdRef.current;
-  const sunElement = sunRef.current;
-
-  if (isDarkMode) {
-    gsap.to(logoElement, {
-      color: 'white',
-    });
-
-    gsap.to(logospElement, {
-      color: 'white',
-    });
-    gsap.to(logopdElement, {
-      color: 'rgb(253, 165, 1)',
-    });
-    gsap.to(sunElement, {
-      color: 'white',
-     
-    });
-  } else {
-    gsap.to(logoElement, {
-      color: 'rgb(67, 42, 192)',
-    });
-
-    gsap.to(logospElement, {
-      color: 'rgb(43, 43, 43)',
-    });
-    gsap.to(logopdElement, {
-      color: 'black',
-    });
-    gsap.to(sunElement, {
-      color: 'black',
-    });
-  }
-
   useEffect(() => {
     const navSecElement = navSecRef.current;
-    const logoElement = logoRef.current;
-    const logospElement = logospRef.current;
-    const logopdElement = logopdRef.current;
-    const sunElement = sunRef.current;
 
-    if (isMenuOpen) {
-      gsap.to(navSecElement, {
-        duration: 0.2,
-        clipPath: 'circle(141.2% at 100% 0)', delay: 0
-      });
-      gsap.to(logoElement, {
-        color: 'white',
-        delay: 0.5
-      });
-
-      gsap.to(logospElement, {
-        color: 'white',
-        delay: 0.5,
-      });
-      gsap.to(sunElement, {
-        color: 'white',
-        delay: 0.5,sunElement
-      });
-      gsap.to(logopdElement, {
-        color: 'rgb(253, 165, 1)',
-        delay: 0.5,
-      });
-    } else {
-      gsap.to(navSecElement, {
-        duration: 0.2,
-        clipPath: 'circle(0.0% at 100% 0)', delay: 0
-      });
-      gsap.to(logoElement, {
-        color: 'rgb(67, 42, 192)',
-        delay: 2
-      });
-
-      gsap.to(logospElement, {
-        color: 'rgb(43, 43, 43)',
-        delay: 2
-      });
-      gsap.to(logopdElement, {
-        color: 'black',
-        delay: 2
-      });
-      gsap.to(sunElement, {
-        color: 'black',
-        delay: 2
-      });
+    const islaptop = typeof window !== 'undefined' && window.innerWidth >= 768;
+    
+    if (islaptop) {
+      if (isMenuOpen) {
+        gsap.to(navSecElement, {
+          duration: 0.2,
+          clipPath: 'circle(141.2% at 100% 0)', delay: 0
+        });
+      } else {
+        gsap.to(navSecElement, {
+          duration: 0.2,
+          clipPath: 'circle(0.0% at 100% 0)', delay: 0
+        });
+      }
     }
+    // =================================================
+    if(islaptop==false) {
+      if (isMenuOpen) {
+        gsap.to(navSecElement, {
+          duration: 0.2,
+          clipPath: 'circle(141.2% at 100% 0)', delay: 0
+        });
+       
+      } else {
+        gsap.to(navSecElement, {
+          duration: 0.2,
+          clipPath: 'circle(0.0% at 100% 0)', delay: 0
+        });
+      
+      }
+    }
+
 
   }, [isMenuOpen]);
 
@@ -137,7 +84,7 @@ const Navbar = () => {
             {isDarkMode ? <MdSunny size={25} /> : <MdDarkMode size={25} />}
           </div>
           <div id='menuicon' onClick={toggleMenu} ref={logospRef}>
-            {isMenuOpen ? <LiaTimesSolid/> : <RiMenu4Fill/>}
+            {isMenuOpen ? <LiaTimesSolid /> : <RiMenu4Fill />}
           </div>
         </div>
 

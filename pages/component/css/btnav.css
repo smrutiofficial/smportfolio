@@ -1,6 +1,6 @@
 .btnav {
-    position: fixed;
-    background: rgb(61, 42, 207);
+    /* position: fixed; */
+    background: #373559;
     bottom: 0;
     width: 100vw;
     height: 2.8rem;
@@ -10,21 +10,69 @@
     color: aliceblue;
 }
 
-.deactive{
+.deactive {
     font-size: 1.2rem;
-    color:rgb(158, 148, 238) ;
+    color: rgb(150, 143, 203);
+
 }
-.active{
+
+.active {
     font-size: 1.5rem !important;
     background: rgb(255, 255, 255);
-    color:rgb(61, 42, 207) !important;
+    color: #373559;
     padding: 0.2rem 0.8rem;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     height: 2.5rem;
     border-radius: 0.8rem;
     transform: translateY(-1rem);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.darkm,#menuicon,.logo{
+    color: white;
+}
+.logo span{
+    color: #5D5B9A;
+}
+
+
+/* =============================================================== */
+@media (min-width: 768px) {
+
+    .btnav {
+        /* position: fixed; */
+        background: #373559;
+        top: 0;
+        left: 0;
+        width: 4rem;
+        height: 100%;
+        /* height: 2.8rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+        gap: 3rem;
+    }
+    .deactive {
+        font-size: 2rem;
+        color: rgb(150, 143, 203);
+    }
+    
+    .active {
+        font-size: 2.2rem !important;
+        background: rgb(255, 255, 255);
+        color:#373559;
+        padding: 0.8rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        border-radius: 0.8rem;
+        transform: translate(1rem,0rem);
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    }
 }

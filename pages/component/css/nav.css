@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 .dark {
-  background-color: black;
-  color: white;
+    background-color: #1B2033;
+    color: white;
 }
 
 nav {
@@ -14,15 +14,15 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.25);
+    background: #373559;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
     /* color: white;rgb(253, 165, 1) */
     height: 2.8rem;
-    width: 100vw;
+    width: 100%;
     z-index: 100;
 }
 
@@ -30,7 +30,7 @@ nav {
     font-size: 1.3rem;
     font-weight: 500;
     margin-left: 1rem;
-    color: rgb(74, 55, 186);
+    color:#373559;
     font-weight: 700;
 }
 
@@ -52,7 +52,7 @@ nav {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background: rgb(67, 42, 192);
+    background: #373559;
     z-index: 99;
     transition: clip-path 2s;
 }
@@ -67,10 +67,49 @@ nav {
     display: block;
     clip-path: circle(141.2% at 100% 0);
 }
-.shower{
+
+.shower {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     align-items: center;
     justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================== */
+@media (min-width: 768px) {
+    nav {
+        height: 3.8rem;
+        width: 97%;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .navsec {
+        max-width: 25vw;
+        right: 0;
+        color: #373559 ;
+    }
 }
