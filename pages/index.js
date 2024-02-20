@@ -107,7 +107,7 @@ const Index = () => {
             <h1 className="hwe">Hello world!</h1>testimonials
           </section>
           <section id='made'>
-            <h1 className="hwe">Hello world!</h1>how it's made
+            <h1 className="hwe">Hello world!</h1>how its made
           </section>
         </div>
       </div>
